@@ -1,0 +1,28 @@
+{
+  "name": "tp1",
+  "version": "1.0.0",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node index.js",
+    "devstart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CDelgrange/express-esimed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CDelgrange/express-esimed/issues"
+  },
+  "homepage": "https://github.com/CDelgrange/express-esimed#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "fs-extra": "^10.0.1",
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "description": ""
+}
