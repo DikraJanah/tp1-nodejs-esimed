@@ -1,4 +1,5 @@
 const users = require('./db')
+const md5 = require("md5");
 const getUsers = function () {
     return users
 }
@@ -14,12 +15,18 @@ const createUser = function (body) {
 }
 const deleteUser = function (id) {
     const user = users.findIndex((u) => id == u.id)
+    if (user === -1) {
+        throw new Error('Utilisateur introuvable')
+    }
     return users.splice( user, 1 )
-
 }
 
 const modifUser = function (id) {
-    return users.values()
+    const user = users.findIndex((u) => id == u.id)
+    if (user === -1) {
+        throw new Error('Utilisateur introuvable')
+    }
+    return users.splice( user, 1 )
 }
 
 module.exports = {
